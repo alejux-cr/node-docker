@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t alejux/node .
   - docker images alejux/node
+
+before_deploy:
+  - docker login -u alejuxcr -p Ucanthackthis110101
+
+deploy:
+  provider: script
+  script: docker push alejux/node-docker
+  on:
+    branch: master

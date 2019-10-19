@@ -7,7 +7,7 @@ script:
   - docker images alejuxcr/node-docker
 
 before_deploy:
-  - docker login -u alejuxcr -p Ucanthackthis110101
+  - docker login -u <username> -p <password>
 
 deploy:
   provider: script

@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t alejux/node-docker .
-  - docker images alejux/node-docker
+  - docker build -t alejuxcr/node-docker .
+  - docker images alejuxcr/node-docker
 
 before_deploy:
   - docker login -u alejuxcr -p Ucanthackthis110101
 
 deploy:
   provider: script
-  script: docker push alejux/node-docker
+  script: docker push alejuxcr/node-docker
   on:
     branch: master
